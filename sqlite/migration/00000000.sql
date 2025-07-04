@@ -1,0 +1,14 @@
+-- Initial migration
+-- This file exists to demonstrate the migration pattern.
+-- The migrations table is created automatically by the migration system.
+
+-- Add your initial schema here when ready.
+-- For example:
+-- CREATE TABLE books (
+--     id INTEGER PRIMARY KEY AUTOINCREMENT,
+--     title TEXT NOT NULL,
+--     author TEXT NOT NULL,
+--     isbn TEXT,
+--     created_at DATETIME NOT NULL,
+--     updated_at DATETIME NOT NULL
+-- );
