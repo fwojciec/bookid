@@ -1,0 +1,17 @@
+[
+  {
+    "title": "The Great Gatsby",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "isbn10": "0743273567",
+    "isbn13": "9780743273565",
+    "publisher": "Simon and Schuster",
+    "published_year": 2004,
+    "language": "en",
+    "google_books_volume_id": "fIlQDwAAQBAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=fIlQDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "confidence": 0.95,
+    "search_type": "isbn"
+  }
+]

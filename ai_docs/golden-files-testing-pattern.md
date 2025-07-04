@@ -2,471 +2,433 @@
 
 ## Overview
 
-The golden files testing pattern, popularized by Mitchell Hashimoto in his "Advanced Testing with Go" talk, is a technique for testing functions that produce complex output. Instead of hardcoding expected results in test code, the expected output is stored in separate files called "golden files."
+The golden files testing pattern is a technique for testing functions that produce complex output, particularly useful for external API integrations. Instead of hardcoding expected results in test code, the expected output is stored in separate files called "golden files."
 
-## When to Use Golden Files
+This pattern has evolved from simple file comparison to a sophisticated approach for API contract testing while maintaining clean package boundaries and testability.
 
-Golden files are particularly effective for:
-- Testing functions that generate complex formatted output (JSON, HTML, Markdown)
-- Verifying HTTP responses and headers
-- Comparing large data structures
-- Testing code generation or transformation tools
-- Testing AI/ML model responses where output may vary slightly but should remain consistent
-- Contract testing with external APIs
+## Core Principles
 
-## Recommended File Organization
+1. **Package Boundary Testing**: All tests must use the `_test` package suffix to ensure you're testing through the public API
+2. **No Test Code in Production**: Never expose test-only functions or flags in your production code
+3. **Separate Concerns**: Golden file generation (with real API calls) is separate from validation tests
+4. **Domain Types in Golden Files**: Store your domain types, not raw API responses, to maintain clean boundaries
 
-For better separation of concerns and maintainability, we recommend separating fixture management from functional tests:
+## Implementation Pattern
+
+### Directory Structure
 
 ```
-mypackage/
-├── mypackage.go
-├── fixture_test.go      # Golden file updates (with -update flag)
-├── mypackage_test.go    # Functional tests using fixtures
+googlebooks/
+├── client.go           # Production code
+├── parser.go           # Production code
+├── client_test.go      # Contract validation tests (package googlebooks_test)
+├── parser_test.go      # Unit tests (package googlebooks_test)
+├── golden_update_test.go # Golden file generation (package googlebooks_test)
 └── testdata/
-    ├── TestCase1.golden
-    ├── TestCase2.golden.json
-    └── TestCase3.golden.xml
+    ├── isbn_9780743273565.json
+    ├── title_author_gatsby.json
+    └── no_results.json
 ```
 
-This separation provides:
-- Clear distinction between fixture generation and test logic
-- Easier code review (fixture changes vs test changes)
-- Better organization for large test suites
-- Isolated contract testing capabilities
+### 1. Golden File Update Test
 
-## Basic Implementation
-
-### 1. Simple Golden File Test
+This test is responsible for making real API calls and storing the results as golden files:
 
 ```go
-package mypackage_test
+// golden_update_test.go
+package googlebooks_test
 
 import (
-    "bytes"
-    "flag"
-    "os"
-    "path/filepath"
-    "testing"
-)
-
-var update = flag.Bool("update", false, "update .golden files")
-
-func TestSomething(t *testing.T) {
-    // Run the function under test
-    actual := doSomething()
-    
-    // Define golden file path
-    golden := filepath.Join("testdata", t.Name()+".golden")
-    
-    if *update {
-        // Update mode: save actual output as golden file
-        err := os.MkdirAll("testdata", 0755)
-        if err != nil {
-            t.Fatal(err)
-        }
-        err = os.WriteFile(golden, actual, 0644)
-        if err != nil {
-            t.Fatal(err)
-        }
-        t.Logf("Updated golden file: %s", golden)
-    }
-    
-    // Read expected output from golden file
-    expected, err := os.ReadFile(golden)
-    if err != nil {
-        if os.IsNotExist(err) && !*update {
-            t.Fatalf("golden file %s does not exist. Run with -update flag to create it", golden)
-        }
-        t.Fatal(err)
-    }
-    
-    // Compare actual vs expected
-    if !bytes.Equal(actual, expected) {
-        t.Errorf("output does not match golden file.\nExpected:\n%s\nGot:\n%s", expected, actual)
-    }
-}
-```
-
-### 2. Complex Response Golden Files (JSON)
-
-```go
-func TestComplexResponse(t *testing.T) {
-    type Response struct {
-        Status  string   `json:"status"`
-        Data    []string `json:"data"`
-        Version string   `json:"version"`
-    }
-    
-    golden := filepath.Join("testdata", t.Name()+".golden.json")
-    
-    if *update {
-        // Generate actual response
-        actual := Response{
-            Status:  "success",
-            Data:    []string{"item1", "item2"},
-            Version: "1.0.0",
-        }
-        
-        // Marshal to JSON with pretty printing
-        data, err := json.MarshalIndent(actual, "", "  ")
-        if err != nil {
-            t.Fatal(err)
-        }
-        
-        // Save to golden file
-        err = os.MkdirAll("testdata", 0755)
-        if err != nil {
-            t.Fatal(err)
-        }
-        err = os.WriteFile(golden, data, 0644)
-        if err != nil {
-            t.Fatal(err)
-        }
-        t.Logf("Updated golden file: %s", golden)
-    }
-    
-    // Read and unmarshal golden file
-    data, err := os.ReadFile(golden)
-    if err != nil {
-        if os.IsNotExist(err) && !*update {
-            t.Fatalf("golden file %s does not exist. Run with -update flag", golden)
-        }
-        t.Fatal(err)
-    }
-    
-    var expected Response
-    err = json.Unmarshal(data, &expected)
-    if err != nil {
-        t.Fatal(err)
-    }
-    
-    // Get actual response from your function
-    actual := getComplexResponse()
-    
-    // Compare
-    if !reflect.DeepEqual(actual, expected) {
-        t.Errorf("response mismatch.\nExpected: %+v\nGot: %+v", expected, actual)
-    }
-}
-```
-
-## Running Golden File Tests
-
-### Normal Test Run
-```bash
-go test ./...
-```
-This compares actual output against existing golden files.
-
-### Update Golden Files
-When using the `-update` flag, you need to specify only the packages that have golden tests:
-
-```bash
-# Update all golden files in packages that have them
-go test ./scanner/googlebooks ./scanner/vertexai ./scanner/vision -update
-
-# Or update one package at a time
-go test ./scanner/vertexai -update
-```
-
-**Note**: You cannot run `go test ./... -update` because not all packages define the `-update` flag. Only packages with `golden_test.go` files have this flag.
-
-### Update Specific Test
-```bash
-go test ./scanner/vertexai -run TestSomething -update
-```
-
-## Best Practices
-
-### 1. Manual Review is Critical
-After updating golden files, **always manually review the changes**. The update flag blindly saves whatever the current output is, so you must verify it's correct before committing.
-
-```bash
-# After updating golden files
-git diff testdata/
-# Review each change carefully
-```
-
-### 2. Use testdata Directory
-Go's build system ignores directories named `testdata`, making it the standard location for test fixtures:
-
-```
-mypackage/
-├── mypackage.go
-├── mypackage_test.go
-└── testdata/
-    ├── TestCase1.golden
-    ├── TestCase2.golden.json
-    └── TestCase3.golden.xml
-```
-
-### 3. Version Control Golden Files
-Always commit golden files to version control. They're part of your test suite and should be reviewed in pull requests when they change.
-
-### 4. Avoid Timestamps and Non-Deterministic Data
-If your output includes timestamps or random values, normalize them before comparison:
-
-```go
-func normalizeOutput(data []byte) []byte {
-    // Replace timestamps with fixed value
-    re := regexp.MustCompile(`\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}`)
-    return re.ReplaceAll(data, []byte("2023-01-01T00:00:00"))
-}
-```
-
-### 5. Platform-Specific Line Endings
-Handle line ending differences between platforms:
-
-```go
-import "bytes"
-
-func normalizeLineEndings(data []byte) []byte {
-    // Convert all line endings to \n
-    data = bytes.ReplaceAll(data, []byte("\r\n"), []byte("\n"))
-    data = bytes.ReplaceAll(data, []byte("\r"), []byte("\n"))
-    return data
-}
-```
-
-## Separated Fixture and Test Approach
-
-### fixture_test.go - Golden File Management
-
-This file is responsible for updating golden files with real API responses when run with the `-update` flag:
-
-```go
-package mypackage_test
-
-import (
+    "context"
     "encoding/json"
     "flag"
     "os"
     "path/filepath"
     "testing"
+
+    "github.com/fwojciec/bookid/googlebooks"
     "github.com/stretchr/testify/require"
 )
 
+// Internal flag for golden file updates
 var update = flag.Bool("update", false, "update golden files")
 
-// TestUpdateGoldenFiles updates fixtures when run with -update flag
+// TestUpdateGoldenFiles updates golden files when run with -update flag
+// This test should only be run manually when API responses need to be updated
 func TestUpdateGoldenFiles(t *testing.T) {
+    t.Parallel()
+
     if !*update {
         t.Skip("Run with -update flag to update golden files")
     }
 
-    // This test makes real API calls and saves responses
+    // Get API key from environment
+    apiKey := os.Getenv("GOOGLE_BOOKS_API_KEY")
+    if apiKey == "" {
+        t.Skip("GOOGLE_BOOKS_API_KEY environment variable not set")
+    }
+
+    t.Log("Updating golden files with real API responses...")
+
+    // Test cases that will generate golden files
     testCases := []struct {
-        name  string
-        input string
+        query      string
+        goldenFile string
     }{
         {
-            name:  "simple_query",
-            input: "test input",
+            query:      "9780743273565",
+            goldenFile: "isbn_9780743273565.json",
         },
-        // more test cases...
+        {
+            query:      "The Great Gatsby by F. Scott Fitzgerald",
+            goldenFile: "title_author_gatsby.json",
+        },
+        {
+            query:      "nonexistentbook12345",
+            goldenFile: "no_results.json",
+        },
     }
 
     for _, tc := range testCases {
-        t.Run(tc.name, func(t *testing.T) {
+        t.Run(tc.goldenFile, func(t *testing.T) {
+            t.Parallel()
+            // Create real client using public API
+            client, err := googlebooks.NewClient(apiKey)
+            require.NoError(t, err)
+
             // Make real API call
-            response := makeRealAPICall(tc.input)
-            
-            // Save response to golden file
-            golden := filepath.Join("testdata", tc.name+".golden.json")
-            data, err := json.MarshalIndent(response, "", "  ")
+            ctx := context.Background()
+            results, err := client.Search(ctx, tc.query)
             require.NoError(t, err)
-            
-            err = os.WriteFile(golden, data, 0644)
+
+            // Save to golden file
+            goldenPath := filepath.Join("testdata", tc.goldenFile)
+
+            // Ensure testdata directory exists
+            err = os.MkdirAll("testdata", 0755)
             require.NoError(t, err)
-            t.Logf("Updated golden file: %s", golden)
+
+            // Marshal with pretty printing
+            data, err := json.MarshalIndent(results, "", "  ")
+            require.NoError(t, err)
+
+            err = os.WriteFile(goldenPath, data, 0644)
+            require.NoError(t, err)
+
+            t.Logf("Updated golden file: %s", goldenPath)
+            t.Logf("Results count: %d", len(results))
         })
     }
 }
 ```
 
-### mypackage_test.go - Functional Tests
+### 2. Contract Validation Tests
 
-This file contains the actual tests that use the golden files as fixtures:
+These tests validate that golden files contain the expected structure and serve as contract tests:
 
 ```go
-package mypackage_test
+// client_test.go
+package googlebooks_test
 
 import (
+    "context"
     "encoding/json"
     "os"
     "path/filepath"
     "testing"
+
+    "github.com/fwojciec/bookid"
+    "github.com/fwojciec/bookid/googlebooks"
     "github.com/stretchr/testify/assert"
     "github.com/stretchr/testify/require"
 )
 
-func TestFunctionality(t *testing.T) {
-    testCases := []struct {
-        name          string
-        input         string
-        goldenFile    string
-        validateFunc  func(t *testing.T, got, want interface{})
-    }{
-        {
-            name:       "simple_query",
-            input:      "test input",
-            goldenFile: "simple_query.golden.json",
-        },
-        // more test cases...
+// TestGoldenFiles validates that the golden files contain the expected data structure
+// This serves as a contract test - when golden files are updated with -update flag,
+// this test ensures the API responses still contain the fields we depend on
+func TestGoldenFiles(t *testing.T) {
+    t.Parallel()
+
+    // Check if golden files exist - if not, skip validation
+    // This allows golden file generation to happen independently
+    testDataPath := filepath.Join("testdata", "isbn_9780743273565.json")
+    if _, err := os.Stat(testDataPath); os.IsNotExist(err) {
+        t.Skip("Golden files not found - run tests with -update flag in the googlebooks package first")
     }
 
-    for _, tc := range testCases {
-        t.Run(tc.name, func(t *testing.T) {
+    tests := []struct {
+        name               string
+        goldenFile         string
+        expectedResults    int
+        expectedFirstTitle string
+        validateFields     func(t *testing.T, result bookid.BookResult)
+    }{
+        {
+            name:               "isbn_search",
+            goldenFile:         "isbn_9780743273565.json",
+            expectedResults:    1,
+            expectedFirstTitle: "The Great Gatsby",
+            validateFields: func(t *testing.T, result bookid.BookResult) {
+                t.Helper()
+                assert.NotEmpty(t, result.ISBN10)
+                assert.NotEmpty(t, result.ISBN13)
+                assert.NotEmpty(t, result.Publisher)
+                assert.NotEmpty(t, result.GoogleBooksVolumeID)
+                assert.Equal(t, bookid.SearchTypeISBN, result.SearchType)
+                assert.InDelta(t, 0.95, result.Confidence, 0.01)
+            },
+        },
+        // ... more test cases
+    }
+
+    for _, tt := range tests {
+        t.Run(tt.name, func(t *testing.T) {
+            t.Parallel()
+
             // Load golden file
-            golden := filepath.Join("testdata", tc.goldenFile)
-            data, err := os.ReadFile(golden)
-            require.NoError(t, err, "golden file should exist")
-            
-            var expected Response
-            err = json.Unmarshal(data, &expected)
-            require.NoError(t, err)
-            
-            // Run function under test with mocked client
-            mockClient := createMockFromGolden(expected)
-            result := functionUnderTest(mockClient, tc.input)
-            
-            // Validate results
-            assert.Equal(t, expected, result)
+            goldenPath := filepath.Join("testdata", tt.goldenFile)
+            data, err := os.ReadFile(goldenPath)
+            require.NoError(t, err, "golden file should exist: %s", goldenPath)
+
+            var results []bookid.BookResult
+            err = json.Unmarshal(data, &results)
+            require.NoError(t, err, "golden file should contain valid BookResult array")
+
+            // Validate structure
+            assert.Len(t, results, tt.expectedResults)
+
+            if tt.expectedResults > 0 {
+                assert.Equal(t, tt.expectedFirstTitle, results[0].Title)
+
+                // Run field-specific validations
+                if tt.validateFields != nil {
+                    tt.validateFields(t, results[0])
+                }
+            }
         })
     }
 }
 ```
 
-### Benefits of Separation
+## Key Design Decisions
 
-1. **Clear Responsibilities**: 
-   - `fixture_test.go` handles external API interactions
-   - `mypackage_test.go` focuses on business logic testing
+### 1. Store Domain Types, Not Raw API Responses
 
-2. **Better CI/CD Integration**:
-   - Regular test runs don't require API access
-   - Golden file updates can be run manually or on schedule
-   - Reduces flaky tests due to network issues
+Instead of storing raw API responses, transform them to your domain types before saving. This:
+- Allows all tests to remain in the `_test` package
+- Tests the actual transformation logic during golden file generation
+- Makes golden files serve as documentation of your domain model
+- Enables contract testing without exposing internals
 
-3. **Improved Code Review**:
-   - Fixture changes are isolated and easy to review
-   - Test logic changes don't mix with data updates
-   - Contract changes are immediately visible
+### 2. Make Tests Independent
 
-4. **Contract Documentation**:
-   - Golden files serve as living API documentation
-   - No separate contract docs to maintain
-   - Real examples from actual API responses
+The validation tests check if golden files exist before running. This prevents test failures when golden files haven't been generated yet and makes the test suite more robust.
 
-## Real-World Example: Contract Testing with Golden Files
+### 3. Use Public API Only
 
-Golden files naturally serve as contract documentation by capturing real API responses. Each golden file becomes a living document of the API contract:
+All tests, including golden file generation, use only the public API of your package. This ensures you're testing what consumers of your package will actually use.
 
-```json
-// testdata/book_search_gatsby.golden.json
-{
-  "kind": "books#volumes",
-  "totalItems": 1,
-  "items": [
-    {
-      "volumeInfo": {
-        "title": "The Great Gatsby",
-        "authors": ["F. Scott Fitzgerald"],
-        "publishedDate": "1925",
-        "industryIdentifiers": [
-          {
-            "type": "ISBN_13",
-            "identifier": "9780743273565"
-          }
-        ]
-      }
-    }
-  ]
+## Running Tests
+
+### Normal Test Run
+```bash
+# Run all tests (validates against existing golden files)
+go test ./...
+```
+
+### Generate/Update Golden Files
+```bash
+# Set up environment (if needed)
+export GOOGLE_BOOKS_API_KEY="your-api-key"
+
+# Update golden files for a specific package
+go test ./googlebooks -update
+
+# Update golden files with verbose output
+go test ./googlebooks -update -v
+```
+
+### Running in CI/CD
+
+```yaml
+# CI pipeline example
+test:
+  steps:
+    # Regular tests run without API access
+    - name: Run Tests
+      run: go test -race ./...
+    
+    # Golden file updates run separately (e.g., nightly)
+    - name: Update Golden Files
+      if: github.event_name == 'schedule'
+      env:
+        GOOGLE_BOOKS_API_KEY: ${{ secrets.GOOGLE_BOOKS_API_KEY }}
+      run: |
+        go test ./googlebooks -update
+        # Commit changes if any
+```
+
+## Best Practices
+
+### 1. Always Use t.Parallel()
+
+Enable parallel test execution and race detection:
+
+```go
+func TestSomething(t *testing.T) {
+    t.Parallel()
+    // test code...
 }
 ```
 
-This approach eliminates the need for separate contract documentation - the fixtures themselves document:
-- API response structure
-- Field types and formats
-- Real-world examples
-- Edge cases and variations
+### 2. Review Golden File Changes
 
-## Common Pitfalls
+After updating golden files, always review the changes:
 
-1. **Forgetting to Review**: Always review golden file changes before committing
-2. **Binary Files**: Use appropriate comparison for binary files (images, etc.)
-3. **Large Files**: Consider using checksums for very large golden files
-4. **Missing Files**: Provide clear error messages when golden files are missing
+```bash
+# Update golden files
+go test ./googlebooks -update
 
-## Alternatives and Libraries
+# Review changes
+git diff testdata/
 
-- **sebdah/goldie**: Full-featured golden file testing library
-- **xorcare/golden**: Minimal golden file testing package
-- **gotestfmt**: Can format test output for better golden file diffs
+# Ensure changes are expected before committing
+```
+
+### 3. Use t.Helper() in Test Helpers
+
+Mark test helper functions to improve error reporting:
+
+```go
+func validateFields(t *testing.T, result BookResult) {
+    t.Helper()
+    assert.NotEmpty(t, result.Title)
+    // ... more validations
+}
+```
+
+### 4. Keep Golden Files Small and Focused
+
+Each golden file should represent a specific test case. Don't create huge golden files that test multiple scenarios.
+
+### 5. Handle Missing Golden Files Gracefully
+
+Provide clear error messages when golden files are missing:
+
+```go
+if _, err := os.Stat(testDataPath); os.IsNotExist(err) {
+    t.Skip("Golden files not found - run tests with -update flag first")
+}
+```
+
+## Common Pitfalls and Solutions
+
+### Pitfall 1: Test-Only Code in Production
+
+**Wrong:**
+```go
+// client.go
+func IsUpdatingGoldenFiles() bool {
+    return *update
+}
+```
+
+**Right:**
+Keep all test code in test files and use the public API.
+
+### Pitfall 2: Internal Package Tests for Golden Files
+
+**Wrong:**
+```go
+// golden_test.go
+package googlebooks // internal package test
+
+func TestUpdateGolden(t *testing.T) {
+    // Can access private fields, but breaks testpackage linting rule
+}
+```
+
+**Right:**
+Use the `_test` package and store domain types in golden files.
+
+### Pitfall 3: Hardcoding Expected Values
+
+**Wrong:**
+```go
+// Hardcoding expected values in tests
+assert.Equal(t, "The Great Gatsby", results[0].Title)
+assert.Equal(t, []string{"F. Scott Fitzgerald"}, results[0].Authors)
+```
+
+**Right:**
+Store expectations in golden files and validate structure, not specific values.
+
+## Advanced Patterns
+
+### Mock Client Using Golden Files
+
+Create a mock client that returns data from golden files:
+
+```go
+type MockClient struct {
+    responses map[string][]bookid.BookResult
+}
+
+func NewMockClientFromGoldenFiles() (*MockClient, error) {
+    mock := &MockClient{
+        responses: make(map[string][]bookid.BookResult),
+    }
+    
+    // Load all golden files
+    files, err := filepath.Glob("testdata/*.json")
+    if err != nil {
+        return nil, err
+    }
+    
+    for _, file := range files {
+        data, err := os.ReadFile(file)
+        if err != nil {
+            return nil, err
+        }
+        
+        var results []bookid.BookResult
+        if err := json.Unmarshal(data, &results); err != nil {
+            return nil, err
+        }
+        
+        // Use filename as key
+        key := filepath.Base(file)
+        mock.responses[key] = results
+    }
+    
+    return mock, nil
+}
+```
+
+### Contract Evolution Testing
+
+Track API contract changes over time:
+
+```go
+func TestContractCompatibility(t *testing.T) {
+    // Load current golden file
+    current := loadGoldenFile(t, "current_response.json")
+    
+    // Load previous version
+    previous := loadGoldenFile(t, "previous_response.json")
+    
+    // Verify backward compatibility
+    assertBackwardCompatible(t, previous, current)
+}
+```
 
 ## Summary
 
-Golden file testing is a powerful pattern for testing complex outputs. It makes tests more maintainable by separating test logic from expected data, and the `-update` flag workflow makes it easy to update expectations as code evolves. Just remember: always manually verify golden file updates before committing them.
+The golden files pattern, when properly implemented:
+1. Maintains clean package boundaries with all tests in `_test` packages
+2. Keeps test concerns out of production code
+3. Provides living documentation of API contracts
+4. Enables fast, reliable tests that don't require external dependencies
+5. Makes contract changes visible in code reviews
 
-## Book Scanner Implementation
-
-The Book Scanner project demonstrates an evolved approach to golden file testing that addresses common pitfalls:
-
-### Key Improvements
-
-1. **Simplified Test Structure**: Instead of complex HTTP-level mocking, tests either:
-   - Make real API calls when `-update` flag is set
-   - Use saved golden files with domain-level mocks otherwise
-
-2. **Single Flag Definition**: Each package defines the `-update` flag only once in `golden_helper_test.go` to avoid conflicts
-
-3. **Local Utilities**: Following Ben Johnson's Standard Package Layout, golden test helpers are kept local to each package rather than in a shared internal package
-
-### Example from googlebooks Package
-
-```go
-// golden_helper_test.go
-var update = flag.Bool("update", false, "update golden files")
-
-func compareWithGolden(t *testing.T, filename string, actual interface{}) {
-    t.Helper()
-    actualJSON, err := json.MarshalIndent(actual, "", "  ")
-    require.NoError(t, err)
-    
-    if *update {
-        updateGolden(t, filename, actualJSON)
-        return
-    }
-    
-    expectedJSON := loadGolden(t, filename)
-    assert.JSONEq(t, string(expectedJSON), string(actualJSON))
-}
-
-// golden_test.go
-func TestEnrichMetadata_Golden(t *testing.T) {
-    if *update {
-        // Real API call to update golden files
-        client, err := googlebooks.New(apiKey)
-        require.NoError(t, err)
-        defer client.Close()
-        
-        result, err := client.EnrichMetadata(ctx, "The Great Gatsby")
-        require.NoError(t, err)
-        compareWithGolden(t, "great_gatsby.json", result)
-        return
-    }
-    
-    // Normal test run - just validate golden file exists and is valid
-    goldenData := loadGolden(t, "great_gatsby.json")
-    var book bookscanner.Book
-    err := json.Unmarshal(goldenData, &book)
-    require.NoError(t, err)
-    
-    // Basic validation
-    assert.NotEmpty(t, book.Title)
-    assert.NotEmpty(t, book.Author)
-}
-```
-
-This approach ensures tests are fast, reliable, and maintain proper separation between testing the API contract (golden files) and testing business logic (unit tests with mocks).
+By storing domain types instead of raw API responses, we achieve the best of both worlds: clean architecture and practical testing.
