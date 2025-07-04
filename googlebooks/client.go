@@ -24,6 +24,9 @@ func NewClient(apiKey string) (*Client, error) {
 	opts := []option.ClientOption{}
 	if apiKey != "" {
 		opts = append(opts, option.WithAPIKey(apiKey))
+	} else {
+		// Explicitly disable authentication when no API key is provided
+		opts = append(opts, option.WithoutAuthentication())
 	}
 
 	service, err := books.NewService(ctx, opts...)
