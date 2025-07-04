@@ -61,6 +61,18 @@ func TestGoldenFiles(t *testing.T) {
 			},
 		},
 		{
+			name:               "title_only_search",
+			goldenFile:         "title_only_pride.json",
+			expectedResults:    10,
+			expectedFirstTitle: "Pride and Prejudice",
+			validateFields: func(t *testing.T, result bookid.BookResult) {
+				t.Helper()
+				assert.NotEmpty(t, result.Title)
+				assert.Equal(t, bookid.SearchTypeTitle, result.SearchType)
+				assert.InDelta(t, 0.70, result.Confidence, 0.01)
+			},
+		},
+		{
 			name:            "no_results",
 			goldenFile:      "no_results.json",
 			expectedResults: 0,

@@ -46,6 +46,10 @@ func TestUpdateGoldenFiles(t *testing.T) {
 			goldenFile: "title_author_gatsby.json",
 		},
 		{
+			query:      "Pride and Prejudice",
+			goldenFile: "title_only_pride.json",
+		},
+		{
 			query:      "nonexistentbook12345",
 			goldenFile: "no_results.json",
 		},

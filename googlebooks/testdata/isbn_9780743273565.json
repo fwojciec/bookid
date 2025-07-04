@@ -11,6 +11,65 @@
     "language": "en",
     "google_books_volume_id": "fIlQDwAAQBAJ",
     "thumbnail_url": "http://books.google.com/books/content?id=fIlQDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "SAMPLE",
+        "country": "US",
+        "embeddable": true,
+        "epub": {},
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "viewability": "PARTIAL",
+        "webReaderLink": "http://play.google.com/books/reader?id=fIlQDwAAQBAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "OzE3kMJod54",
+      "id": "fIlQDwAAQBAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "A mysterious American millionaire tries to recapture the sweetheart of his youth, which results in tragedy."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/fIlQDwAAQBAJ",
+      "volumeInfo": {
+        "authors": [
+          "F. Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby.html?hl=\u0026id=fIlQDwAAQBAJ",
+        "categories": [
+          "Fiction"
+        ],
+        "contentVersion": "0.3.2.0.preview.0",
+        "description": "A mysterious American millionaire tries to recapture the sweetheart of his youth, which results in tragedy.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=fIlQDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=fIlQDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "9780743273565",
+            "type": "ISBN_13"
+          },
+          {
+            "identifier": "0743273567",
+            "type": "ISBN_10"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=fIlQDwAAQBAJ\u0026dq=isbn:9780743273565\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "pageCount": 208,
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=fIlQDwAAQBAJ\u0026printsec=frontcover\u0026dq=isbn:9780743273565\u0026hl=\u0026cd=1\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2004-09-30",
+        "publisher": "Simon and Schuster",
+        "readingModes": {},
+        "title": "The Great Gatsby"
+      }
+    },
     "confidence": 0.95,
     "search_type": "isbn"
   }

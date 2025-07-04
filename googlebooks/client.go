@@ -2,13 +2,13 @@ package googlebooks
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"strconv"
 	"strings"
 
 	"github.com/fwojciec/bookid"
 	"google.golang.org/api/books/v1"
-	"google.golang.org/api/googleapi"
 	"google.golang.org/api/option"
 )
 
@@ -62,16 +62,23 @@ func (c *Client) Search(ctx context.Context, query string) ([]bookid.BookResult,
 
 	resp, err := call.Do()
 	if err != nil {
-		if gerr, ok := err.(*googleapi.Error); ok {
-			return nil, errors.New(gerr.Message)
-		}
+		// Return the original error to preserve context
+		// Callers can check for googleapi.Error if they need specific handling
 		return nil, err
 	}
 
 	// Convert to BookResult
 	results := make([]bookid.BookResult, 0, len(resp.Items))
 	for _, volume := range resp.Items {
+		// Marshal the volume to JSON for GoogleBooksData field
+		volumeJSON, err := json.Marshal(volume)
+		if err != nil {
+			// Log error but continue - don't fail the whole search
+			volumeJSON = nil
+		}
+
 		result := volumeToBookResult(volume, searchType, detectedISBN)
+		result.GoogleBooksData = volumeJSON
 		results = append(results, result)
 	}
 
