@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    name: Validate
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+
+    - name: Set up Go
+      uses: actions/setup-go@v5
+      with:
+        go-version: '1.24'
+        cache: true
+
+    - name: Download dependencies
+      run: go mod download
+
+    - name: Verify dependencies
+      run: go mod verify
+
+    - name: Install golangci-lint
+      uses: golangci/golangci-lint-action@v8
+      with:
+        version: v2.1
+
+    - name: Run validation (same as local)
+      run: |
+        if ! make validate; then
+          echo '::error title=Validation Failed::make validate failed'
+          exit 1
+        fi
+
+    - name: Run tests with coverage
+      run: |
+        if ! go test -v -race -coverprofile=coverage.txt -covermode=atomic ./...; then
+          echo '::error title=Test Failures::Tests with coverage failed'
+          exit 1
+        fi
+        echo '✅ Tests with coverage passed'
+
+    - name: Build
+      run: |
+        if ! go build -v ./...; then
+          echo '::error title=Build Failed::Build failed'
+          exit 1
+        fi
+        echo '✅ Build successful'
