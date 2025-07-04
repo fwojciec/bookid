@@ -10,7 +10,7 @@
     "published_year": 2013,
     "language": "en",
     "google_books_volume_id": "2vwoHo3MMpwC",
-    "thumbnail_url": "http://books.google.com/books/content?id=2vwoHo3MMpwC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=2vwoHo3MMpwC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "SAMPLE",
@@ -25,7 +25,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=2vwoHo3MMpwC\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "d0ipfiqW7D4",
+      "etag": "HZIYqNEQIA4",
       "id": "2vwoHo3MMpwC",
       "kind": "books#volume",
       "saleInfo": {
@@ -90,7 +90,7 @@
     "published_year": 2020,
     "language": "en",
     "google_books_volume_id": "gnQJEAAAQBAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=gnQJEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=gnQJEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "SAMPLE",
@@ -102,7 +102,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=gnQJEAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "Dfc+esARsEg",
+      "etag": "XaeLiBu74D8",
       "id": "gnQJEAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -163,7 +163,7 @@
     "published_year": 2015,
     "language": "en",
     "google_books_volume_id": "WpD_DAAAQBAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=WpD_DAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=WpD_DAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "SAMPLE",
@@ -181,7 +181,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=WpD_DAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "urx2Yj6Po0o",
+      "etag": "+ameaYWFpWs",
       "id": "WpD_DAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -238,7 +238,7 @@
     "published_year": 2020,
     "language": "en",
     "google_books_volume_id": "xmnuDwAAQBAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=xmnuDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=xmnuDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "SAMPLE",
@@ -250,7 +250,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=xmnuDwAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "e2MA812Y1KM",
+      "etag": "jlKH3mi0DS4",
       "id": "xmnuDwAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -313,7 +313,7 @@
     "published_year": 2000,
     "language": "en",
     "google_books_volume_id": "qYiMEAAAQBAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=qYiMEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=qYiMEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "NONE",
@@ -324,7 +324,7 @@
         "viewability": "NO_PAGES",
         "webReaderLink": "http://play.google.com/books/reader?id=qYiMEAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "NoupLVWLdFA",
+      "etag": "TuuypxDF/0g",
       "id": "qYiMEAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -396,7 +396,7 @@
         "viewability": "NO_PAGES",
         "webReaderLink": "http://play.google.com/books/reader?id=cnqszwEACAAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "NzuMtR7eLEo",
+      "etag": "0yvAEGjV09A",
       "id": "cnqszwEACAAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -448,7 +448,7 @@
     "published_year": 2021,
     "language": "en",
     "google_books_volume_id": "1b9zzgEACAAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=1b9zzgEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=1b9zzgEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "NONE",
@@ -459,7 +459,7 @@
         "viewability": "NO_PAGES",
         "webReaderLink": "http://play.google.com/books/reader?id=1b9zzgEACAAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "5Rr0Gjs+LZA",
+      "etag": "FeB6RlEVL4w",
       "id": "1b9zzgEACAAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -513,7 +513,7 @@
     "published_year": 2019,
     "language": "en",
     "google_books_volume_id": "InrADwAAQBAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=InrADwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=InrADwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "SAMPLE",
@@ -531,7 +531,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=InrADwAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "E0VM3WVYWAU",
+      "etag": "ZBtj38zz8vk",
       "id": "InrADwAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -595,7 +595,7 @@
     "published_year": 2024,
     "language": "en",
     "google_books_volume_id": "tbgCEQAAQBAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=tbgCEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=tbgCEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "NONE",
@@ -606,7 +606,7 @@
         "viewability": "NO_PAGES",
         "webReaderLink": "http://play.google.com/books/reader?id=tbgCEQAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "m/CWCuxqm74",
+      "etag": "4PzWn1Z0LNA",
       "id": "tbgCEQAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -665,7 +665,7 @@
     "published_year": 2021,
     "language": "en",
     "google_books_volume_id": "c-PbDwAAQBAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=c-PbDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=c-PbDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "SAMPLE",
@@ -677,7 +677,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=c-PbDwAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "FVnlhB4c/5U",
+      "etag": "7HlvkEIPqtE",
       "id": "c-PbDwAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {

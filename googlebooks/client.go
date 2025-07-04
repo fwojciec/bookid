@@ -124,12 +124,12 @@ func volumeToBookResult(volume *books.Volume, searchType bookid.SearchType, dete
 		result.PublishedYear = year
 	}
 
-	// Extract thumbnail URL
+	// Extract thumbnail URL and ensure HTTPS
 	if volume.VolumeInfo.ImageLinks != nil {
 		if volume.VolumeInfo.ImageLinks.Thumbnail != "" {
-			result.ThumbnailURL = volume.VolumeInfo.ImageLinks.Thumbnail
+			result.ThumbnailURL = strings.Replace(volume.VolumeInfo.ImageLinks.Thumbnail, "http://", "https://", 1)
 		} else if volume.VolumeInfo.ImageLinks.SmallThumbnail != "" {
-			result.ThumbnailURL = volume.VolumeInfo.ImageLinks.SmallThumbnail
+			result.ThumbnailURL = strings.Replace(volume.VolumeInfo.ImageLinks.SmallThumbnail, "http://", "https://", 1)
 		}
 	}
 

@@ -10,7 +10,7 @@
     "published_year": 2004,
     "language": "en",
     "google_books_volume_id": "fIlQDwAAQBAJ",
-    "thumbnail_url": "http://books.google.com/books/content?id=fIlQDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "thumbnail_url": "https://books.google.com/books/content?id=fIlQDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
     "google_books_data": {
       "accessInfo": {
         "accessViewStatus": "SAMPLE",
@@ -22,7 +22,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=fIlQDwAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "OzE3kMJod54",
+      "etag": "Aq71xuM9PO0",
       "id": "fIlQDwAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
