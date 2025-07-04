@@ -24,9 +24,9 @@ mypackage/
 ├── fixture_test.go      # Golden file updates (with -update flag)
 ├── mypackage_test.go    # Functional tests using fixtures
 └── testdata/
-    ├── test_case_1.golden
-    ├── test_case_2.golden.json
-    └── test_case_3.golden.xml
+    ├── TestCase1.golden
+    ├── TestCase2.golden.json
+    └── TestCase3.golden.xml
 ```
 
 This separation provides:
