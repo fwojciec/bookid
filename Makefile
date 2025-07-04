@@ -40,12 +40,17 @@ validate: ## Run all validation checks (same as CI)
 	@go test -race -shuffle=on ./...
 	@echo "✅ Tests OK"
 	@echo "4. Checking go.mod..."
+	@cp go.mod go.mod.bak
+	@cp go.sum go.sum.bak 2>/dev/null || true
 	@go mod tidy
-	@if [ -n "$$(git status --porcelain go.mod go.sum)" ]; then \
+	@if ! diff -q go.mod go.mod.bak >/dev/null 2>&1 || ! diff -q go.sum go.sum.bak >/dev/null 2>&1; then \
 		echo "❌ go.mod/go.sum needs updating. Run 'go mod tidy'"; \
-		git diff go.mod go.sum; \
+		diff go.mod.bak go.mod || true; \
+		diff go.sum.bak go.sum || true; \
+		rm -f go.mod.bak go.sum.bak; \
 		exit 1; \
 	fi
+	@rm -f go.mod.bak go.sum.bak
 	@echo "✅ go.mod OK"
 	@echo "5. Running linter..."
 	@golangci-lint run --timeout=5m ./...
