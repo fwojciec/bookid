@@ -9,6 +9,7 @@ Packages are layers, not groups - dependencies flow inward toward the domain.
 - Test through public APIs only (use `package_test` convention)
 - External API contracts: use golden files pattern (see ai_docs/golden-files-testing-pattern.md when testing external APIs)
 - Testing difficulties = design feedback opportunity
+- ALWAYS use t.Parallel() in all tests and subtests to detect data races with -race flag
 
 ## Validation Workflow
 Before ANY commit or when stuck:

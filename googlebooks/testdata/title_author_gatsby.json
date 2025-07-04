@@ -1,0 +1,731 @@
+[
+  {
+    "title": "The Great Gatsby: The Authentic Edition from Fitzgerald's Original Publisher",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "isbn10": "1476755833",
+    "isbn13": "9781476755830",
+    "publisher": "Simon and Schuster",
+    "published_year": 2013,
+    "language": "en",
+    "google_books_volume_id": "2vwoHo3MMpwC",
+    "thumbnail_url": "http://books.google.com/books/content?id=2vwoHo3MMpwC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "SAMPLE",
+        "country": "US",
+        "embeddable": true,
+        "epub": {
+          "acsTokenLink": "http://books.google.com/books/download/The_Great_Gatsby_The_Authentic_Edition_f-sample-epub.acsm?id=2vwoHo3MMpwC\u0026format=epub\u0026output=acs4_fulfillment_token\u0026dl_type=sample\u0026source=gbs_api",
+          "isAvailable": true
+        },
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "viewability": "PARTIAL",
+        "webReaderLink": "http://play.google.com/books/reader?id=2vwoHo3MMpwC\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "d0ipfiqW7D4",
+      "id": "2vwoHo3MMpwC",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "The Great Gatsby, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/2vwoHo3MMpwC",
+      "volumeInfo": {
+        "allowAnonLogging": true,
+        "authors": [
+          "F. Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby_The_Authentic_Edition_f.html?hl=\u0026id=2vwoHo3MMpwC",
+        "categories": [
+          "Fiction"
+        ],
+        "contentVersion": "3.6.6.0.preview.2",
+        "description": "The authentic edition from Fitzgerald’s original publisher. The Great Gatsby, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. This exemplary novel of the Jazz Age has been acclaimed by generations of readers. The story of the fabulously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan, of lavish parties on Long Island at a time when The New York Times noted “gin was the national drink and sex the national obsession,” it is an exquisitely crafted tale of America in the 1920s. The Great Gatsby is one of the great classics of twentieth-century literature.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=2vwoHo3MMpwC\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=2vwoHo3MMpwC\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "9781476755830",
+            "type": "ISBN_13"
+          },
+          {
+            "identifier": "1476755833",
+            "type": "ISBN_10"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=2vwoHo3MMpwC\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "pageCount": 208,
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=2vwoHo3MMpwC\u0026printsec=frontcover\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=1\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2013-05-10",
+        "publisher": "Simon and Schuster",
+        "readingModes": {
+          "text": true
+        },
+        "title": "The Great Gatsby: The Authentic Edition from Fitzgerald's Original Publisher"
+      }
+    },
+    "confidence": 0.85,
+    "search_type": "title_author"
+  },
+  {
+    "title": "The Great Gatsby",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "isbn10": "1982146702",
+    "isbn13": "9781982146702",
+    "publisher": "Pocket Books",
+    "published_year": 2020,
+    "language": "en",
+    "google_books_volume_id": "gnQJEAAAQBAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=gnQJEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "SAMPLE",
+        "country": "US",
+        "embeddable": true,
+        "epub": {},
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "viewability": "PARTIAL",
+        "webReaderLink": "http://play.google.com/books/reader?id=gnQJEAAAQBAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "Dfc+esARsEg",
+      "id": "gnQJEAAAQBAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "The Great Gatsby, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. First published by Scribner in 1925, this quintessential novel of the Jazz Age has been acclaimed by generations of readers."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/gnQJEAAAQBAJ",
+      "volumeInfo": {
+        "authors": [
+          "F. Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby.html?hl=\u0026id=gnQJEAAAQBAJ",
+        "categories": [
+          "Fiction"
+        ],
+        "contentVersion": "0.3.1.0.preview.0",
+        "description": "The only edition of the beloved classic that is authorized by Fitzgerald’s family and from his lifelong publisher. This edition is the enduring original text, updated with the author’s own revisions, a foreword by his granddaughter, and with a new introduction by National Book Award winner Jesmyn Ward. The Great Gatsby, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career. First published by Scribner in 1925, this quintessential novel of the Jazz Age has been acclaimed by generations of readers. The story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan is an exquisitely crafted tale of America in the 1920s.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=gnQJEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=gnQJEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "9781982146702",
+            "type": "ISBN_13"
+          },
+          {
+            "identifier": "1982146702",
+            "type": "ISBN_10"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=gnQJEAAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "pageCount": 208,
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=gnQJEAAAQBAJ\u0026printsec=frontcover\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=2\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2020-11-17",
+        "publisher": "Pocket Books",
+        "readingModes": {},
+        "subtitle": "The Only Authorized Edition",
+        "title": "The Great Gatsby"
+      }
+    },
+    "confidence": 0.85,
+    "search_type": "title_author"
+  },
+  {
+    "title": "The Great Gatsby: F. Scott Fitzgerald",
+    "authors": [
+      "Editorial Aleph",
+      "F. Scott Fitzgerald"
+    ],
+    "published_year": 2015,
+    "language": "en",
+    "google_books_volume_id": "WpD_DAAAQBAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=WpD_DAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "SAMPLE",
+        "country": "US",
+        "embeddable": true,
+        "epub": {
+          "acsTokenLink": "http://books.google.com/books/download/The_Great_Gatsby_F_Scott_Fitzgerald-sample-epub.acsm?id=WpD_DAAAQBAJ\u0026format=epub\u0026output=acs4_fulfillment_token\u0026dl_type=sample\u0026source=gbs_api",
+          "isAvailable": true
+        },
+        "pdf": {
+          "acsTokenLink": "http://books.google.com/books/download/The_Great_Gatsby_F_Scott_Fitzgerald-sample-pdf.acsm?id=WpD_DAAAQBAJ\u0026format=pdf\u0026output=acs4_fulfillment_token\u0026dl_type=sample\u0026source=gbs_api",
+          "isAvailable": true
+        },
+        "textToSpeechPermission": "ALLOWED",
+        "viewability": "PARTIAL",
+        "webReaderLink": "http://play.google.com/books/reader?id=WpD_DAAAQBAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "urx2Yj6Po0o",
+      "id": "WpD_DAAAQBAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "The pair meet five years before the novel begins, when Daisy is a legendary young Louisville beauty and Gatsby an impoverished officer."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/WpD_DAAAQBAJ",
+      "volumeInfo": {
+        "authors": [
+          "Editorial Aleph",
+          "F. Scott Fitzgerald"
+        ],
+        "averageRating": 5,
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby_F_Scott_Fitzgerald.html?hl=\u0026id=WpD_DAAAQBAJ",
+        "categories": [
+          "Fiction"
+        ],
+        "contentVersion": "1.2.2.0.preview.3",
+        "description": "A portrait of the Jazz Age in all of its decadence and excess, The Great Gatsby captured the spirit of the author's generation and earned itself a permanent place in American mythology. Self-made, self-invented millionaire Jay Gatsby embodies some of Fitzgerald's--and his country's--most abiding obsessions: money, ambition, greed, and the promise of new beginnings. \"Gatsby believed in the green light, the orgiastic future that year by year recedes before us. It eluded us then, but that's no matter--tomorrow we will run faster, stretch out our arms farther.... And one fine morning--\"Gatsby's rise to glory and eventual fall from grace becomes a kind of cautionary tale about the American Dream.It's also a love story, of sorts, the narrative of Gatsby's quixotic passion for Daisy Buchanan. The pair meet five years before the novel begins, when Daisy is a legendary young Louisville beauty and Gatsby an impoverished officer. They fall in love, but while Gatsby serves overseas, Daisy marries the brutal, bullying, but extremely rich Tom Buchanan. After the war, Gatsby devotes himself blindly to the pursuit of wealth by whatever means--and to the pursuit of Daisy, which amounts to the same thing. \"Her voice is full of money,\" Gatsby says admiringly. His millions made, Gatsby buys a mansion across Long Island Sound from Daisy's patrician East Egg address, throws lavish parties, and waits for her to appear. When she does, events unfold with detached, cynical neighbor Nick Carraway acting as chorus throughout.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=WpD_DAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=WpD_DAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+        },
+        "infoLink": "http://books.google.com/books?id=WpD_DAAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "pageCount": 74,
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=WpD_DAAAQBAJ\u0026printsec=frontcover\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=3\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2015-06-15",
+        "ratingsCount": 1,
+        "readingModes": {
+          "image": true,
+          "text": true
+        },
+        "title": "The Great Gatsby: F. Scott Fitzgerald"
+      }
+    },
+    "confidence": 0.7224999999999999,
+    "search_type": "title_author"
+  },
+  {
+    "title": "The Great Gatsby",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "isbn10": "1982147709",
+    "isbn13": "9781982147709",
+    "publisher": "Scribner",
+    "published_year": 2020,
+    "language": "en",
+    "google_books_volume_id": "xmnuDwAAQBAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=xmnuDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "SAMPLE",
+        "country": "US",
+        "embeddable": true,
+        "epub": {},
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED_FOR_ACCESSIBILITY",
+        "viewability": "PARTIAL",
+        "webReaderLink": "http://play.google.com/books/reader?id=xmnuDwAAQBAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "e2MA812Y1KM",
+      "id": "xmnuDwAAQBAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "First published in 1925, this quintessential novel of the Jazz Age has been acclaimed by generations of readers and now, lifelong Gatsby fans and new readers alike will be enchanted by this special edition, expanding the audience for this ..."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/xmnuDwAAQBAJ",
+      "volumeInfo": {
+        "authors": [
+          "F. Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby.html?hl=\u0026id=xmnuDwAAQBAJ",
+        "categories": [
+          "Fiction"
+        ],
+        "contentVersion": "0.2.0.0.preview.0",
+        "description": "F. Scott Fitzgerald’s beloved classic, now available in a stunningly designed collector’s edition. The Great Gatsby, F. Scott Fitzgerald’s third book, stands as the supreme achievement of his career and is a true classic of twentieth-century literature. The story of the mysteriously wealthy Jay Gatsby and his love for the beautiful Daisy Buchanan is an exquisitely crafted tale of America in the 1920s. First published in 1925, this quintessential novel of the Jazz Age has been acclaimed by generations of readers and now, lifelong Gatsby fans and new readers alike will be enchanted by this special edition, expanding the audience for this great American novel.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=xmnuDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=xmnuDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "9781982147709",
+            "type": "ISBN_13"
+          },
+          {
+            "identifier": "1982147709",
+            "type": "ISBN_10"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=xmnuDwAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "pageCount": 208,
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=xmnuDwAAQBAJ\u0026printsec=frontcover\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=4\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2020-06-30",
+        "publisher": "Scribner",
+        "readingModes": {},
+        "subtitle": "The Only Authorized Edition",
+        "title": "The Great Gatsby"
+      }
+    },
+    "confidence": 0.85,
+    "search_type": "title_author"
+  },
+  {
+    "title": "Modern Classics Great Gatsby",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "isbn10": "0141182636",
+    "isbn13": "9780141182636",
+    "publisher": "National Geographic Books",
+    "published_year": 2000,
+    "language": "en",
+    "google_books_volume_id": "qYiMEAAAQBAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=qYiMEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "NONE",
+        "country": "US",
+        "epub": {},
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED",
+        "viewability": "NO_PAGES",
+        "webReaderLink": "http://play.google.com/books/reader?id=qYiMEAAAQBAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "NoupLVWLdFA",
+      "id": "qYiMEAAAQBAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "This Penguin Classics edition is edited with an introduction and notes by Tony Tanner."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/qYiMEAAAQBAJ",
+      "volumeInfo": {
+        "authors": [
+          "F. Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/Modern_Classics_Great_Gatsby.html?hl=\u0026id=qYiMEAAAQBAJ",
+        "categories": [
+          "Fiction"
+        ],
+        "contentVersion": "preview-1.0.0",
+        "description": "Now the subject of a major new film from director Baz Luhrmann (Romeo+Juliet, Moulin Rouge!), starring Leonardo DiCaprio and Carey Mulligan, The Great Gatsby is F. Scott Fitzgerald's brilliant fable of the hedonistic excess and tragic reality of 1920s America. This Penguin Classics edition is edited with an introduction and notes by Tony Tanner. Young, handsome and fabulously rich, Jay Gatsby is the bright star of the Jazz Age, but as writer Nick Carraway is drawn into the decadent orbit of his Long Island mansion, where the party never seems to end, he finds himself faced by the mystery of Gatsby's origins and desires. Beneath the shimmering surface of his life, Gatsby is hiding a secret: a silent longing that can never be fulfilled. And soon, this destructive obsession will force his world to unravel. In The Great Gatsby, Fitzgerald brilliantly captures both the disillusionment of post-war America and the moral failure of a society obsessed with wealth and status. But he does more than render the essence of a particular time and place, for - in chronicling Gatsby's tragic pursuit of his dream - Fitzgerald re-creates the universal conflict between illusion and reality. Like Jay Gatsby, F. Scott Fitzgerald (1896–1940) has acquired a mythical status in American literary history, and his masterwork The Great Gatsby is considered by many to be the 'great American novel'. In 1920 he married Zelda Sayre, dubbed 'the first American Flapper', and their traumatic marriage and Zelda's gradual descent into insanity became the leading influence on his writing. As well as many short stories, Fitzgerald wrote five novels This Side of Paradise, The Great Gatsby, The Beautiful and the Damned, Tender is the Night and, incomplete at the time of his death, The Last Tycoon. After his death The New York Times said of him that 'in fact and in the literary sense he created a \"generation\" '. 'A classic, perhaps the supreme American novel' John Carey, Sunday Times Books of the Century",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=qYiMEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=qYiMEAAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "9780141182636",
+            "type": "ISBN_13"
+          },
+          {
+            "identifier": "0141182636",
+            "type": "ISBN_10"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=qYiMEAAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=qYiMEAAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=5\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2000-02-22",
+        "publisher": "National Geographic Books",
+        "readingModes": {
+          "text": true
+        },
+        "title": "Modern Classics Great Gatsby"
+      }
+    },
+    "confidence": 0.85,
+    "search_type": "title_author"
+  },
+  {
+    "title": "The Great Gatsby by F. Scott Fitzgerald",
+    "authors": [
+      "F Scott Fitzgerald"
+    ],
+    "isbn10": "2382269731",
+    "isbn13": "9782382269732",
+    "published_year": 1925,
+    "language": "en",
+    "google_books_volume_id": "cnqszwEACAAJ",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "NONE",
+        "country": "US",
+        "epub": {},
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED",
+        "viewability": "NO_PAGES",
+        "webReaderLink": "http://play.google.com/books/reader?id=cnqszwEACAAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "NzuMtR7eLEo",
+      "id": "cnqszwEACAAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "It\u0026#39;s a masterful depiction of the battle between \u0026quot;old money\u0026quot; depicted by Daisy and Tom Buchanan and the vulgar and crazy presentation of wealth as represented by Jay Gatsby. *Biographical Information: Best Works of F Scott Fitzgerald Here ..."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/cnqszwEACAAJ",
+      "volumeInfo": {
+        "authors": [
+          "F Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby_by_F_Scott_Fitzgerald.html?hl=\u0026id=cnqszwEACAAJ",
+        "contentVersion": "preview-1.0.0",
+        "description": "The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway's interactions with mysterious millionaire Jay Gatsby and Gatsby's obsession to reunite with his former lover, Daisy Buchanan. The novel was inspired by a youthful romance Fitzgerald had with socialite Ginevra King, and the riotous parties he attended on Long Island's North Shore in 1922. Here is the complete text of the novel with the followings annotations: * Historical context: The Great Gatsby brilliantly invokes The ambience of The Jazz Age (a phrase coined by Fitzgerald) or the Roaring Twenties. The economic boom of postwar America, the new jazz music, and also also the free - flowing illegal liquor were all part of the boom. Literary analysis: \"The Great Gatsby\" is a glance at the lives of Americans, especially those that reside on the East Coast. It's a masterful depiction of the battle between \"old money\" depicted by Daisy and Tom Buchanan and the vulgar and crazy presentation of wealth as represented by Jay Gatsby. *Biographical Information: Best Works of F Scott Fitzgerald Here are some of the prominent works of the American author: 1. This Side of Paradise, 1920 2. The Beautiful and Damned (1922) 3. The Great Gatsby (1925) 4. Tender Is the Night (1934)",
+        "industryIdentifiers": [
+          {
+            "identifier": "2382269731",
+            "type": "ISBN_10"
+          },
+          {
+            "identifier": "9782382269732",
+            "type": "ISBN_13"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=cnqszwEACAAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=cnqszwEACAAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=6\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "1925-04-10",
+        "readingModes": {},
+        "subtitle": "Hardcover Book",
+        "title": "The Great Gatsby by F. Scott Fitzgerald"
+      }
+    },
+    "confidence": 0.7862499999999999,
+    "search_type": "title_author"
+  },
+  {
+    "title": "The Great Gatsby By Francis Scott Fitzgerald (Illustrated Edition)",
+    "authors": [
+      "F Scott Fitzgerald"
+    ],
+    "isbn13": "9798502385459",
+    "published_year": 2021,
+    "language": "en",
+    "google_books_volume_id": "1b9zzgEACAAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=1b9zzgEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "NONE",
+        "country": "US",
+        "epub": {},
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED",
+        "viewability": "NO_PAGES",
+        "webReaderLink": "http://play.google.com/books/reader?id=1b9zzgEACAAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "5Rr0Gjs+LZA",
+      "id": "1b9zzgEACAAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "\u0026quot; That extraordinary, beautiful, intricately patterned, and above all, simple novel became The Great Gatsby, arguably Fitzgerald\u0026#39;s finest work and certainly the book for which he is best known."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/1b9zzgEACAAJ",
+      "volumeInfo": {
+        "authors": [
+          "F Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby_By_Francis_Scott_Fitzge.html?hl=\u0026id=1b9zzgEACAAJ",
+        "contentVersion": "preview-1.0.0",
+        "description": "In 1922, F. Scott Fitzgerald announced his decision to write \"something new--something extraordinary and beautiful and simple + intricately patterned.\" That extraordinary, beautiful, intricately patterned, and above all, simple novel became The Great Gatsby, arguably Fitzgerald's finest work and certainly the book for which he is best known. A portrait of the Jazz Age in all of its decadence and excess, Gatsby captured the spirit of the author's generation and earned itself a permanent place in American mythology. Self-made, self-invented millionaire Jay Gatsby embodies some of Fitzgerald's--and his country's--most abiding obsessions: money, ambition, greed, and the promise of new beginnings. \"Gatsby believed in the green light, the orgiastic future that year by year recedes before us. It eluded us then, but that's no matter--tomorrow we will run faster, stretch out our arms farther.... And one fine morning--\" Gatsby's rise to glory and eventual fall from grace becomes a kind of cautionary tale about the American Dream.It's also a love story, of sorts, the narrative of Gatsby's quixotic passion for Daisy Buchanan. The pair meet five years before the novel begins, when Daisy is a legendary young Louisville beauty and Gatsby an impoverished officer. They fall in love, but while Gatsby serves overseas, Daisy marries the brutal, bullying, but extremely rich Tom Buchanan. After the war, Gatsby devotes himself blindly to the pursuit of wealth by whatever means--and to the pursuit of Daisy, which amounts to the same thing. \"Her voice is full of money,\" Gatsby says admiringly, in one of the novel's more famous descriptions. His millions made, Gatsby buys a mansion across Long Island Sound from Daisy's patrician East Egg address, throws lavish parties, and waits for her to appear. When she does, events unfold with all the tragic inevitability of a Greek drama, with detached, cynical neighbor Nick Carraway acting as chorus throughout. Spare, elegantly plotted, and written in crystalline prose, The Great Gatsby is as perfectly satisfying as the best kind of poem.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=1b9zzgEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=1b9zzgEACAAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "9798502385459",
+            "type": "ISBN_13"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=1b9zzgEACAAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "pageCount": 174,
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=1b9zzgEACAAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=7\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2021-05-11",
+        "readingModes": {},
+        "title": "The Great Gatsby By Francis Scott Fitzgerald (Illustrated Edition)"
+      }
+    },
+    "confidence": 0.7862499999999999,
+    "search_type": "title_author"
+  },
+  {
+    "title": "The Great Gatsby",
+    "authors": [
+      "F. Scott Fitzgerald's"
+    ],
+    "isbn10": "8551305034",
+    "isbn13": "9788551305034",
+    "publisher": "Autêntica Editora",
+    "published_year": 2019,
+    "language": "en",
+    "google_books_volume_id": "InrADwAAQBAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=InrADwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "SAMPLE",
+        "country": "US",
+        "embeddable": true,
+        "epub": {
+          "acsTokenLink": "http://books.google.com/books/download/The_Great_Gatsby-sample-epub.acsm?id=InrADwAAQBAJ\u0026format=epub\u0026output=acs4_fulfillment_token\u0026dl_type=sample\u0026source=gbs_api",
+          "isAvailable": true
+        },
+        "pdf": {
+          "acsTokenLink": "http://books.google.com/books/download/The_Great_Gatsby-sample-pdf.acsm?id=InrADwAAQBAJ\u0026format=pdf\u0026output=acs4_fulfillment_token\u0026dl_type=sample\u0026source=gbs_api",
+          "isAvailable": true
+        },
+        "textToSpeechPermission": "ALLOWED",
+        "viewability": "PARTIAL",
+        "webReaderLink": "http://play.google.com/books/reader?id=InrADwAAQBAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "E0VM3WVYWAU",
+      "id": "InrADwAAQBAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "Scott Fitzgerald\u0026#39;s masterpiece, The Great Gatsby is an exquisitely crafted tale of America in the 1920s, during the prosperous and crazy years following World War I. Fitzgerald tells the famous love story of Jay Gatsby and Daisy who, ..."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/InrADwAAQBAJ",
+      "volumeInfo": {
+        "allowAnonLogging": true,
+        "authors": [
+          "F. Scott Fitzgerald's"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby.html?hl=\u0026id=InrADwAAQBAJ",
+        "categories": [
+          "Fiction"
+        ],
+        "contentVersion": "1.5.5.0.preview.3",
+        "description": "Scott Fitzgerald's masterpiece, The Great Gatsby is an exquisitely crafted tale of America in the 1920s, during the prosperous and crazy years following World War I. Fitzgerald tells the famous love story of Jay Gatsby and Daisy who, despite her great passion, marries the insensitive but extremely rich Tom Buchanan. With the end of the war, Gatsby blindly devotes himself to getting rich as a way to win Daisy back. The story is told by Nick Carraway, a young man who rents a modest cottage next to the Gatsby Mansion, observes and exposes the facts without understanding well that world of extravagance, wealth and impending tragedy. The Great Gatsby is considered a worldwide classic and a must read to all of those who love literature.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=InrADwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=InrADwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "9788551305034",
+            "type": "ISBN_13"
+          },
+          {
+            "identifier": "8551305034",
+            "type": "ISBN_10"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=InrADwAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "pageCount": 141,
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=InrADwAAQBAJ\u0026printsec=frontcover\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=8\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2019-11-27",
+        "publisher": "Autêntica Editora",
+        "readingModes": {
+          "image": true,
+          "text": true
+        },
+        "title": "The Great Gatsby"
+      }
+    },
+    "confidence": 0.85,
+    "search_type": "title_author"
+  },
+  {
+    "title": "\"the Great Gatsby\" By F. Scott Fitzgerald",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "publisher": "Clube de Autores",
+    "published_year": 2024,
+    "language": "en",
+    "google_books_volume_id": "tbgCEQAAQBAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=tbgCEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "NONE",
+        "country": "US",
+        "epub": {},
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED",
+        "viewability": "NO_PAGES",
+        "webReaderLink": "http://play.google.com/books/reader?id=tbgCEQAAQBAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "m/CWCuxqm74",
+      "id": "tbgCEQAAQBAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "The novel follows the captivating story of Jay Gatsby, a mysterious and enigmatic millionaire, and his relentless pursuit of the American Dream."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/tbgCEQAAQBAJ",
+      "volumeInfo": {
+        "authors": [
+          "F. Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/the_Great_Gatsby_By_F_Scott_Fitzgerald.html?hl=\u0026id=tbgCEQAAQBAJ",
+        "categories": [
+          "Fiction"
+        ],
+        "contentVersion": "preview-1.0.0",
+        "description": "The Great Gatsby is a timeless classic written by F. Scott Fitzgerald, set against the backdrop of the Roaring Twenties in America. The novel follows the captivating story of Jay Gatsby, a mysterious and enigmatic millionaire, and his relentless pursuit of the American Dream. Narrated by Nick Carraway, a young man from the Midwest who finds himself drawn into the glamorous world of the wealthy elite on Long Island, the narrative unravels the complexities of love, wealth, and disillusionment. Through lavish parties and opulent gatherings, Gatsby attempts to win back the heart of Daisy Buchanan, a woman from his past who is now married to the wealthy and arrogant Tom Buchanan. As the story unfolds, readers are immersed in a world of excess, decadence, and moral decay, where appearances often deceive and the pursuit of wealth and status leads to tragedy. Through vivid imagery and lyrical prose, Fitzgerald paints a vivid portrait of the Jazz Age, exploring themes of identity, ambition, and the emptiness that lurks beneath the surface of wealth and privilege. The Great Gatsby is a masterful work of literature that continues to resonate with readers for its poignant portrayal of the human condition and its critique of the American Dream. With its memorable characters, evocative setting, and timeless themes, Fitzgerald s novel remains a poignant reminder of the fleeting nature of love, success, and the pursuit of happiness.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=tbgCEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=tbgCEQAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "EAN:3410006621883",
+            "type": "OTHER"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=tbgCEQAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=tbgCEQAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=9\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2024-04-03",
+        "publisher": "Clube de Autores",
+        "readingModes": {
+          "text": true
+        },
+        "title": "\"the Great Gatsby\" By F. Scott Fitzgerald"
+      }
+    },
+    "confidence": 0.85,
+    "search_type": "title_author"
+  },
+  {
+    "title": "The Great Gatsby: A Graphic Novel Adaptation",
+    "authors": [
+      "F. Scott Fitzgerald"
+    ],
+    "isbn10": "1536213012",
+    "isbn13": "9781536213010",
+    "publisher": "Candlewick",
+    "published_year": 2021,
+    "language": "en",
+    "google_books_volume_id": "c-PbDwAAQBAJ",
+    "thumbnail_url": "http://books.google.com/books/content?id=c-PbDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api",
+    "google_books_data": {
+      "accessInfo": {
+        "accessViewStatus": "SAMPLE",
+        "country": "US",
+        "embeddable": true,
+        "epub": {},
+        "pdf": {},
+        "textToSpeechPermission": "ALLOWED",
+        "viewability": "PARTIAL",
+        "webReaderLink": "http://play.google.com/books/reader?id=c-PbDwAAQBAJ\u0026hl=\u0026source=gbs_api"
+      },
+      "etag": "FVnlhB4c/5U",
+      "id": "c-PbDwAAQBAJ",
+      "kind": "books#volume",
+      "saleInfo": {
+        "country": "US",
+        "saleability": "NOT_FOR_SALE"
+      },
+      "searchInfo": {
+        "textSnippet": "From the green light across the bay to the billboard with spectacled eyes, F. Scott Fitzgerald’s 1925 American masterpiece roars to life in K. Woodman-Maynard’s exquisite graphic novel—among the first adaptations of the book in this ..."
+      },
+      "selfLink": "https://books.googleapis.com/books/v1/volumes/c-PbDwAAQBAJ",
+      "volumeInfo": {
+        "authors": [
+          "F. Scott Fitzgerald"
+        ],
+        "canonicalVolumeLink": "https://books.google.com/books/about/The_Great_Gatsby_A_Graphic_Novel_Adaptat.html?hl=\u0026id=c-PbDwAAQBAJ",
+        "categories": [
+          "Young Adult Fiction"
+        ],
+        "contentVersion": "0.1.1.0.preview.0",
+        "description": "A sumptuously illustrated adaptation casts the powerful imagery of F. Scott Fitzgerald’s great American novel in a vivid new format. From the green light across the bay to the billboard with spectacled eyes, F. Scott Fitzgerald’s 1925 American masterpiece roars to life in K. Woodman-Maynard’s exquisite graphic novel—among the first adaptations of the book in this genre. Painted in lush watercolors, the inventive interpretation emphasizes both the extravagance and mystery of the characters, as well as the fluidity of Nick Carraway’s unreliable narration. Excerpts from the original text wend through the illustrations, and imagery and metaphors are taken to literal, and often whimsical, extremes, such as when a beautiful partygoer blooms into an orchid and Daisy Buchanan pushes Gatsby across the sky on a cloud. This faithful yet modern adaptation will appeal to fans with deep knowledge of the classic, while the graphic novel format makes it an ideal teaching tool to engage students. With its timeless critique of class, power, and obsession, The Great Gatsby Graphic Novel captures the energy of an era and the enduring resonance of one of the world’s most beloved books.",
+        "imageLinks": {
+          "smallThumbnail": "http://books.google.com/books/content?id=c-PbDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=5\u0026edge=curl\u0026source=gbs_api",
+          "thumbnail": "http://books.google.com/books/content?id=c-PbDwAAQBAJ\u0026printsec=frontcover\u0026img=1\u0026zoom=1\u0026edge=curl\u0026source=gbs_api"
+        },
+        "industryIdentifiers": [
+          {
+            "identifier": "9781536213010",
+            "type": "ISBN_13"
+          },
+          {
+            "identifier": "1536213012",
+            "type": "ISBN_10"
+          }
+        ],
+        "infoLink": "http://books.google.com/books?id=c-PbDwAAQBAJ\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026source=gbs_api",
+        "language": "en",
+        "maturityRating": "NOT_MATURE",
+        "pageCount": 241,
+        "panelizationSummary": {},
+        "previewLink": "http://books.google.com/books?id=c-PbDwAAQBAJ\u0026printsec=frontcover\u0026dq=intitle:%22The+Great+Gatsby%22+inauthor:%22F.+Scott+Fitzgerald%22\u0026hl=\u0026cd=10\u0026source=gbs_api",
+        "printType": "BOOK",
+        "publishedDate": "2021-01-05",
+        "publisher": "Candlewick",
+        "readingModes": {},
+        "title": "The Great Gatsby: A Graphic Novel Adaptation"
+      }
+    },
+    "confidence": 0.85,
+    "search_type": "title_author"
+  }
+]
