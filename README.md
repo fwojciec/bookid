@@ -1,3 +1,3 @@
 # bookid
 
-![CI](https://github.com/fwojciec/bookid/workflows/CI/badge.svg)
+![CI workflow status](https://github.com/fwojciec/bookid/workflows/CI/badge.svg)

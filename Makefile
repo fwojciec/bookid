@@ -42,7 +42,7 @@ validate: ## Run all validation checks (same as CI)
 	@echo "4. Checking go.mod..."
 	@go mod tidy
 	@if [ -n "$$(git status --porcelain go.mod go.sum)" ]; then \
-		echo "❌ go.mod/go.sum need updating. Run 'go mod tidy'"; \
+		echo "❌ go.mod/go.sum needs updating. Run 'go mod tidy'"; \
 		git diff go.mod go.sum; \
 		exit 1; \
 	fi
