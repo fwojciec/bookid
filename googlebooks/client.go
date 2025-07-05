@@ -143,9 +143,7 @@ func volumeToBookResult(volume *books.Volume, searchType bookid.SearchType, dete
 func calculateConfidence(searchType bookid.SearchType, volume *books.Volume) float64 {
 	baseConfidence := map[bookid.SearchType]float64{
 		bookid.SearchTypeISBN:         0.95,
-		bookid.SearchTypeTitleAuthor:  0.85,
-		bookid.SearchTypeTitle:        0.70,
-		bookid.SearchTypeGeneralQuery: 0.50,
+		bookid.SearchTypeGeneralQuery: 0.70,
 	}
 
 	confidence := baseConfidence[searchType]

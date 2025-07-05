@@ -26,7 +26,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=kULmEAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "TkKvquNxkkU",
+      "etag": "hwymHimiI7k",
       "id": "kULmEAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -98,8 +98,8 @@
         "title": "The Great Gatsby"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "The Great Gatsby",
@@ -130,7 +130,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=acb8EAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "kV/uvMhkReI",
+      "etag": "eybDJkXNBF0",
       "id": "acb8EAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -202,8 +202,8 @@
         "title": "The Great Gatsby"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "The Great Gatsby and Other Works",
@@ -231,7 +231,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=zvvtDwAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "m5Q2sdPImeE",
+      "etag": "UIoHe/rtsAM",
       "id": "zvvtDwAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -306,8 +306,8 @@
         "title": "The Great Gatsby and Other Works"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "The Great Gatsby",
@@ -331,7 +331,7 @@
         "viewability": "NO_PAGES",
         "webReaderLink": "http://play.google.com/books/reader?id=rrKMEAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "CZyYPCLtbJ8",
+      "etag": "DyvabcdW2DQ",
       "id": "rrKMEAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -380,8 +380,8 @@
         "title": "The Great Gatsby"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "The Great Gatsby",
@@ -410,7 +410,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=CSjmEAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "QKj1rUpQ+B4",
+      "etag": "cYhhwpERpIE",
       "id": "CSjmEAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -482,8 +482,8 @@
         "title": "The Great Gatsby"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "The Great Gatsby",
@@ -511,7 +511,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=HestSXO362YC\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "D6F12Q74w7U",
+      "etag": "trczPtPV5lo",
       "id": "HestSXO362YC",
       "kind": "books#volume",
       "saleInfo": {
@@ -563,8 +563,8 @@
         "title": "The Great Gatsby"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "The Great Gatsby: A Graphic Novel Adaptation",
@@ -595,7 +595,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=gqvyDwAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "eDMvUSAg6Cg",
+      "etag": "7JW62r3wbOY",
       "id": "gqvyDwAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -671,8 +671,8 @@
         "title": "The Great Gatsby: A Graphic Novel Adaptation"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "F. Scott Fitzgerald: The Great Gatsby, All the Sad Young Men \u0026 Other Writings 1920–26 (LOA #353)",
@@ -696,7 +696,7 @@
         "viewability": "NO_PAGES",
         "webReaderLink": "http://play.google.com/books/reader?id=zkyQEAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "gpJ9sKfg3LY",
+      "etag": "biWC/j9zw7c",
       "id": "zkyQEAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -745,8 +745,8 @@
         "title": "F. Scott Fitzgerald: The Great Gatsby, All the Sad Young Men \u0026 Other Writings 1920–26 (LOA #353)"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "So We Read On",
@@ -774,7 +774,7 @@
         "viewability": "NO_PAGES",
         "webReaderLink": "http://play.google.com/books/reader?id=uKZUBAAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "9MOgmdG3HPw",
+      "etag": "rUGnKIXDvkY",
       "id": "uKZUBAAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -825,8 +825,8 @@
         "title": "So We Read On"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   },
   {
     "title": "The Great Gatsby",
@@ -851,7 +851,7 @@
         "viewability": "PARTIAL",
         "webReaderLink": "http://play.google.com/books/reader?id=xmnuDwAAQBAJ\u0026hl=\u0026source=gbs_api"
       },
-      "etag": "QdiQ4prVa9I",
+      "etag": "00PNsIMZ+v8",
       "id": "xmnuDwAAQBAJ",
       "kind": "books#volume",
       "saleInfo": {
@@ -900,7 +900,7 @@
         "title": "The Great Gatsby"
       }
     },
-    "confidence": 0.85,
-    "search_type": "title_author"
+    "confidence": 0.7,
+    "search_type": "general"
   }
 ]

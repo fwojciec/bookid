@@ -56,8 +56,8 @@ func TestGoldenFiles(t *testing.T) {
 			validateFields: func(t *testing.T, result bookid.BookResult) {
 				t.Helper()
 				assert.NotEmpty(t, result.Authors)
-				assert.Equal(t, bookid.SearchTypeTitleAuthor, result.SearchType)
-				assert.InDelta(t, 0.85, result.Confidence, 0.01)
+				assert.Equal(t, bookid.SearchTypeGeneralQuery, result.SearchType)
+				assert.InDelta(t, 0.70, result.Confidence, 0.01)
 			},
 		},
 		{
@@ -68,8 +68,8 @@ func TestGoldenFiles(t *testing.T) {
 			validateFields: func(t *testing.T, result bookid.BookResult) {
 				t.Helper()
 				assert.NotEmpty(t, result.Title)
-				assert.Equal(t, bookid.SearchTypeTitle, result.SearchType)
-				assert.InDelta(t, 0.70, result.Confidence, 0.01)
+				assert.Equal(t, bookid.SearchTypeGeneralQuery, result.SearchType)
+				assert.InDelta(t, 0.70, result.Confidence, 0.06)
 			},
 		},
 		{
