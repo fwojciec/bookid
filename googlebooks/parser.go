@@ -39,17 +39,18 @@ func ParseQuery(input string) (query string, searchType bookid.SearchType, isbn 
 		}
 	}
 
-	// Check for author pattern
+	// For all non-ISBN queries, use natural language search
+	// Google Books API handles fuzzy matching better than strict operators
+	// This allows for variations in title/author spelling and formatting
+
+	// Check for author pattern to determine search type
 	if matches := authorPattern.FindStringSubmatch(cleanInput); len(matches) > 0 {
-		// For queries with "by author", use the full query string
-		// Google Books handles natural language queries better than strict operators
-		// for cases where the exact title might not match
 		return cleanInput, bookid.SearchTypeTitleAuthor, ""
 	}
 
-	// Check if it looks like just a title (no numbers, reasonable length)
+	// If no numbers and reasonable length, likely just a title
 	if !containsNumbers(cleanInput) && len(cleanInput) < 100 {
-		return `intitle:"` + cleanInput + `"`, bookid.SearchTypeTitle, ""
+		return cleanInput, bookid.SearchTypeTitle, ""
 	}
 
 	// Default to general query

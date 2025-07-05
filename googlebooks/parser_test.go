@@ -61,7 +61,7 @@ func TestParseQuery(t *testing.T) {
 		{
 			name:          "title_only",
 			input:         "The Great Gatsby",
-			expectedQuery: `intitle:"The Great Gatsby"`,
+			expectedQuery: "The Great Gatsby",
 			expectedType:  bookid.SearchTypeTitle,
 		},
 		{
