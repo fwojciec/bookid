@@ -52,7 +52,7 @@ func TestGoldenFiles(t *testing.T) {
 			name:               "title_author_search",
 			goldenFile:         "title_author_gatsby.json",
 			expectedResults:    10,
-			expectedFirstTitle: "The Great Gatsby: The Authentic Edition from Fitzgerald's Original Publisher",
+			expectedFirstTitle: "The Great Gatsby",
 			validateFields: func(t *testing.T, result bookid.BookResult) {
 				t.Helper()
 				assert.NotEmpty(t, result.Authors)

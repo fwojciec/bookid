@@ -55,7 +55,7 @@ func TestParseQuery(t *testing.T) {
 		{
 			name:          "title_and_author",
 			input:         "The Great Gatsby by F. Scott Fitzgerald",
-			expectedQuery: `intitle:"The Great Gatsby" inauthor:"F. Scott Fitzgerald"`,
+			expectedQuery: "The Great Gatsby by F. Scott Fitzgerald",
 			expectedType:  bookid.SearchTypeTitleAuthor,
 		},
 		{

@@ -41,14 +41,10 @@ func ParseQuery(input string) (query string, searchType bookid.SearchType, isbn 
 
 	// Check for author pattern
 	if matches := authorPattern.FindStringSubmatch(cleanInput); len(matches) > 0 {
-		author := strings.TrimSpace(matches[1])
-		// Extract title by removing the author part
-		titlePart := authorPattern.ReplaceAllString(cleanInput, "")
-		title := strings.TrimSpace(titlePart)
-
-		if title != "" {
-			return `intitle:"` + title + `" inauthor:"` + author + `"`, bookid.SearchTypeTitleAuthor, ""
-		}
+		// For queries with "by author", use the full query string
+		// Google Books handles natural language queries better than strict operators
+		// for cases where the exact title might not match
+		return cleanInput, bookid.SearchTypeTitleAuthor, ""
 	}
 
 	// Check if it looks like just a title (no numbers, reasonable length)
