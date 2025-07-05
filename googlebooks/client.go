@@ -143,9 +143,7 @@ func volumeToBookResult(volume *books.Volume, searchType bookid.SearchType, dete
 func calculateConfidence(searchType bookid.SearchType, volume *books.Volume) float64 {
 	baseConfidence := map[bookid.SearchType]float64{
 		bookid.SearchTypeISBN:         0.95,
-		bookid.SearchTypeTitleAuthor:  0.85,
-		bookid.SearchTypeTitle:        0.70,
-		bookid.SearchTypeGeneralQuery: 0.50,
+		bookid.SearchTypeGeneralQuery: 0.70,
 	}
 
 	confidence := baseConfidence[searchType]
@@ -202,11 +200,17 @@ func extractYear(dateStr string) int {
 	return 0
 }
 
-// ensureHTTPS converts HTTP URLs to HTTPS
+// ensureHTTPS converts an HTTP URL to HTTPS by replacing only the leading scheme.
+// If the URL already uses HTTPS or is empty, it is returned unchanged.
+// This function only modifies the URL scheme and preserves any other occurrences
+// of "http://" that might appear elsewhere in the URL (e.g., in query parameters).
 func ensureHTTPS(url string) string {
 	if url == "" {
 		return ""
 	}
-	// Use ReplaceAll for robustness, even though current API only has http:// at the beginning
-	return strings.ReplaceAll(url, "http://", "https://")
+	// Replace only the URL scheme if it starts with http://
+	if strings.HasPrefix(url, "http://") {
+		return "https://" + url[len("http://"):]
+	}
+	return url
 }

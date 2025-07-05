@@ -13,9 +13,6 @@ var (
 
 	// ISBN-13: exactly 13 digits starting with 978 or 979 (with optional dashes)
 	isbn13Pattern = regexp.MustCompile(`\b(97[89][-\s]?\d{1,5}[-\s]?\d{1,7}[-\s]?\d{1,7}[-\s]?\d)\b`)
-
-	// Common author patterns
-	authorPattern = regexp.MustCompile(`(?i)\b(?:by|author:|written by)\s+([^,\n]+)`)
 )
 
 // ParseQuery analyzes the input string and returns an appropriate Google Books API query
@@ -39,24 +36,9 @@ func ParseQuery(input string) (query string, searchType bookid.SearchType, isbn 
 		}
 	}
 
-	// Check for author pattern
-	if matches := authorPattern.FindStringSubmatch(cleanInput); len(matches) > 0 {
-		author := strings.TrimSpace(matches[1])
-		// Extract title by removing the author part
-		titlePart := authorPattern.ReplaceAllString(cleanInput, "")
-		title := strings.TrimSpace(titlePart)
-
-		if title != "" {
-			return `intitle:"` + title + `" inauthor:"` + author + `"`, bookid.SearchTypeTitleAuthor, ""
-		}
-	}
-
-	// Check if it looks like just a title (no numbers, reasonable length)
-	if !containsNumbers(cleanInput) && len(cleanInput) < 100 {
-		return `intitle:"` + cleanInput + `"`, bookid.SearchTypeTitle, ""
-	}
-
-	// Default to general query
+	// For all non-ISBN queries, use natural language search
+	// Google Books API handles fuzzy matching better than strict operators
+	// This allows for variations in title/author spelling and formatting
 	return cleanInput, bookid.SearchTypeGeneralQuery, ""
 }
 
@@ -89,14 +71,4 @@ func isAllDigits(s string) bool {
 		}
 	}
 	return true
-}
-
-// containsNumbers checks if string contains any digits
-func containsNumbers(s string) bool {
-	for _, r := range s {
-		if r >= '0' && r <= '9' {
-			return true
-		}
-	}
-	return false
 }

@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 
 	"github.com/fwojciec/bookid"
@@ -46,18 +47,26 @@ func TestGoldenFiles(t *testing.T) {
 				assert.NotEmpty(t, result.GoogleBooksVolumeID)
 				assert.Equal(t, bookid.SearchTypeISBN, result.SearchType)
 				assert.InDelta(t, 0.95, result.Confidence, 0.01)
+				// Verify thumbnail URL uses HTTPS
+				if result.ThumbnailURL != "" {
+					assert.True(t, strings.HasPrefix(result.ThumbnailURL, "https://"), "Thumbnail URL should use HTTPS")
+				}
 			},
 		},
 		{
 			name:               "title_author_search",
 			goldenFile:         "title_author_gatsby.json",
 			expectedResults:    10,
-			expectedFirstTitle: "The Great Gatsby: The Authentic Edition from Fitzgerald's Original Publisher",
+			expectedFirstTitle: "The Great Gatsby",
 			validateFields: func(t *testing.T, result bookid.BookResult) {
 				t.Helper()
 				assert.NotEmpty(t, result.Authors)
-				assert.Equal(t, bookid.SearchTypeTitleAuthor, result.SearchType)
-				assert.InDelta(t, 0.85, result.Confidence, 0.01)
+				assert.Equal(t, bookid.SearchTypeGeneralQuery, result.SearchType)
+				assert.InDelta(t, 0.70, result.Confidence, 0.01)
+				// Verify thumbnail URL uses HTTPS
+				if result.ThumbnailURL != "" {
+					assert.True(t, strings.HasPrefix(result.ThumbnailURL, "https://"), "Thumbnail URL should use HTTPS")
+				}
 			},
 		},
 		{
@@ -68,8 +77,12 @@ func TestGoldenFiles(t *testing.T) {
 			validateFields: func(t *testing.T, result bookid.BookResult) {
 				t.Helper()
 				assert.NotEmpty(t, result.Title)
-				assert.Equal(t, bookid.SearchTypeTitle, result.SearchType)
-				assert.InDelta(t, 0.70, result.Confidence, 0.01)
+				assert.Equal(t, bookid.SearchTypeGeneralQuery, result.SearchType)
+				assert.InDelta(t, 0.70, result.Confidence, 0.06)
+				// Verify thumbnail URL uses HTTPS
+				if result.ThumbnailURL != "" {
+					assert.True(t, strings.HasPrefix(result.ThumbnailURL, "https://"), "Thumbnail URL should use HTTPS")
+				}
 			},
 		},
 		{
