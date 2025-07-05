@@ -124,12 +124,12 @@ func volumeToBookResult(volume *books.Volume, searchType bookid.SearchType, dete
 		result.PublishedYear = year
 	}
 
-	// Extract thumbnail URL
+	// Extract thumbnail URL and ensure HTTPS
 	if volume.VolumeInfo.ImageLinks != nil {
 		if volume.VolumeInfo.ImageLinks.Thumbnail != "" {
-			result.ThumbnailURL = volume.VolumeInfo.ImageLinks.Thumbnail
+			result.ThumbnailURL = ensureHTTPS(volume.VolumeInfo.ImageLinks.Thumbnail)
 		} else if volume.VolumeInfo.ImageLinks.SmallThumbnail != "" {
-			result.ThumbnailURL = volume.VolumeInfo.ImageLinks.SmallThumbnail
+			result.ThumbnailURL = ensureHTTPS(volume.VolumeInfo.ImageLinks.SmallThumbnail)
 		}
 	}
 
@@ -200,4 +200,13 @@ func extractYear(dateStr string) int {
 	}
 
 	return 0
+}
+
+// ensureHTTPS converts HTTP URLs to HTTPS
+func ensureHTTPS(url string) string {
+	if url == "" {
+		return ""
+	}
+	// Use ReplaceAll for robustness, even though current API only has http:// at the beginning
+	return strings.ReplaceAll(url, "http://", "https://")
 }
