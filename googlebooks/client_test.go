@@ -5,6 +5,7 @@ import (
 	"encoding/json"
 	"os"
 	"path/filepath"
+	"strings"
 	"testing"
 
 	"github.com/fwojciec/bookid"
@@ -46,6 +47,10 @@ func TestGoldenFiles(t *testing.T) {
 				assert.NotEmpty(t, result.GoogleBooksVolumeID)
 				assert.Equal(t, bookid.SearchTypeISBN, result.SearchType)
 				assert.InDelta(t, 0.95, result.Confidence, 0.01)
+				// Verify thumbnail URL uses HTTPS
+				if result.ThumbnailURL != "" {
+					assert.True(t, strings.HasPrefix(result.ThumbnailURL, "https://"), "Thumbnail URL should use HTTPS")
+				}
 			},
 		},
 		{
@@ -58,6 +63,10 @@ func TestGoldenFiles(t *testing.T) {
 				assert.NotEmpty(t, result.Authors)
 				assert.Equal(t, bookid.SearchTypeGeneralQuery, result.SearchType)
 				assert.InDelta(t, 0.70, result.Confidence, 0.01)
+				// Verify thumbnail URL uses HTTPS
+				if result.ThumbnailURL != "" {
+					assert.True(t, strings.HasPrefix(result.ThumbnailURL, "https://"), "Thumbnail URL should use HTTPS")
+				}
 			},
 		},
 		{
@@ -70,6 +79,10 @@ func TestGoldenFiles(t *testing.T) {
 				assert.NotEmpty(t, result.Title)
 				assert.Equal(t, bookid.SearchTypeGeneralQuery, result.SearchType)
 				assert.InDelta(t, 0.70, result.Confidence, 0.06)
+				// Verify thumbnail URL uses HTTPS
+				if result.ThumbnailURL != "" {
+					assert.True(t, strings.HasPrefix(result.ThumbnailURL, "https://"), "Thumbnail URL should use HTTPS")
+				}
 			},
 		},
 		{
